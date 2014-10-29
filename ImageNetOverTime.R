@@ -17,7 +17,7 @@ ggplot(data=df, aes(x=Year, y=ClassificationError)) +
     theme(axis.title.x=element_text(vjust=-1)) +
     theme(axis.title.y=element_text(vjust=1)) +
     geom_line(data=data.frame(Year=c(2010,2014), ClassificationError=c(0,0)), size=1, linetype=2) +
-    geom_text(data=data.frame(Year=c(2012), ClassificationError=c(0.02)), label="Perfect", size=6)
+    geom_text(data=data.frame(Year=c(2012), ClassificationError=c(0.015)), label="Perfect", size=6)
 
-ggsave("ImageNetObjectClassification.png", width=8, height=6, units="in")
+ggsave("ImageNetObjectClassification.png", width=12, height=8, units="in")
     
