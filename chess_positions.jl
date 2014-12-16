@@ -14,4 +14,8 @@ position_selections = factorial(board_size)/(factorial(board_size-num_empty)*fac
 println("There are ", position_selections, " ways to select the squares for these pieces")
 ways_to_place_all_pieces = position_selections*factorial(num_pieces)/reduce(*, [factorial(x) for x=all_pieces])
 println("There are ", ways_to_place_all_pieces, " ways to place all the pieces")
-println("Note, this assumes that there's no restrictions on where pieces can be placed and that no pieces are removed from the board")
+
+maximum_possible_chess_boards = ways_to_place_all_pieces * 2^(num_pieces-2) # can't remove kings
+
+println("There are ", maximum_possible_chess_boards, " maximum possible chess boards")
+println("Note: upper bound discounts pawns becoming queens, but that's less than everything it overcounts")
