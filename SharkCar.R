@@ -1,4 +1,5 @@
 library(ggplot2)
+library(grid)
 library(scales)
 
 df <- data.frame(Object         = factor(c("Sharks   ","Sharks   ","Cars","Cars"), levels=c("Sharks   ", "Cars")),
